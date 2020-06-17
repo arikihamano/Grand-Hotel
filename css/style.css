@@ -76,8 +76,8 @@ body {
 
 /* navigation */
 .navigation {
-  margin-left: 8rem;
   position: fixed;
+  left: -32rem;
   width: 40rem;
   height: 100%;
   background: linear-gradient(
@@ -91,7 +91,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* transition: left 0.8s cubic-bezier(1, 0, 0, 1); */
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
 }
 
 .navigation-heading {
@@ -201,5 +201,20 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.checkbox:checked ~ .navigation {
+  left: 8rem;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+  transform: rotate(-405deg) translate(-5px, 6px);
+}
+
+.checkbox:checked ~ .sidebar .line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+  transform: rotate(405deg) translate(-5px, -6px);
+}
 /* end of navigation */
 /* end of navbar */
